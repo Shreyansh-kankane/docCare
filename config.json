@@ -1,0 +1,14 @@
+{
+    "params":
+    {
+        "local_server": "True",
+        "local_uri": "mysql://root:@localhost/mycontactdb",
+        "prod_uri": "mysql://root:@localhost/mycontactdb",
+        "fb_url": "https://www.facebook.com/codingninja",
+        "tw_url":"https://twitter.com/narendramodi",
+        "gh_url":"https://github.com/harshjohar",
+        "gmail-user":"",
+        "gmail-pass":"",
+        "islogin": "False"
+    }
+}
