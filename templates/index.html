@@ -17,30 +17,42 @@
             </div>
         </header>
         
-        <div class="wrapper">
+
+        
+        <div style="text-align: center;">
+            <h3>Welcome {{ur_name}} to DocCare</h3>
+            <br>
+            <h6>we offer you the most personalised health Care!!</h6>
+        </div>
+
+        <div class="wrapper xyz">
             <h3 class="site-heading">Provide your symptoms here!</h3><br>
             <div class="search-input">
-            <a href="" target="_blank" hidden></a>
-            <input type="text" placeholder="Type to search..">
-            <div class="autocom-box">
+                <a href="" target="_blank" hidden></a>
+                <input type="text" placeholder="Type to search.." id="textfield" onclick="ClearFields()">
+                <div class="autocom-box">
                 <!-- here list are inserted from javascript -->
-            </div>
-            <div class="icon"><i class="fas fa-search"></i></div>
+                 </div>
+                <div class="icon" ><ion-icon name="add-circle-sharp" size="large" style="text-align: center;" ></ion-icon>
+                </div>
             </div>
 
             <br>
             <div class="subbuttn">
                 <a href="" target="_blank" hidden></a>
-                <button type="button" class="btn btn-primary btn-lg text-uppercase">Submit</button>
+                <button type="button" class="btn-lg text-uppercase button-85">Submit</button>
                 <!-- <a class="btn btn-primary text-uppercase" href="" style="text-align: center;">Submit</a> -->
             </div>
             <br>
         </div>  
         
-        <div class="symptoms" id="myDIV">
-            <!-- come from js -->
+        <div class="symptoms" >
+            <div id="myDIV">
+                <!-- come from js -->
+            </div>
         </div>
         
+        <br><br><br>
             {% if disease is defined %}
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -55,6 +67,18 @@
                                 <!-- <a href="#!">Admin</a> -->
                             </p>
                         </div>
+                        <div class="post-preview">
+                            <a href="post.html">
+                                <h2 class="post-title">Know more about {{Disease}} </h2>
+                                <h3 class="post-subtitle">Problems look mighty small from 150 miles up</h3>
+                            </a>
+                            <p class="post-meta">
+                                Posted by
+                                <a href="#!">Admin</a>
+                                
+                            </p>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -118,7 +142,7 @@
                     <!-- Divider-->
                     <hr class="my-4" />
                     <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+                    <!-- <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div> -->
                 </div>
             </div>
         </div>

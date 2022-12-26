@@ -1,0 +1,1 @@
+{'Age': 0, 'Sex': 1, 'Chest pain type': 2, 'BP': 3, 'Cholesterol': 4, 'FBS over 120': 5, 'EKG results': 6, 'Max HR': 7, 'Exercise angina': 8, 'ST depression': 9, 'Slope of ST': 10, 'Number of vessels fluro': 11, 'Thallium': 12}

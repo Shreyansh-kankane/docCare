@@ -52,6 +52,29 @@ inputBox.onkeyup = (e)=>{
     }
 }
 
+function ClearFields(){
+    document.getElementById("textfield").value = "";
+}
+
+
+function remove(el) {
+    var element = el;
+    element.remove();
+    let disease = el.innerHTML;
+    let index = dict[disease];
+
+    let i=api_key.length-2;
+    while(i>0 && api_key[i] !== '_' ){
+        i--;
+    }
+    if(i===0){
+        api_key = "";
+    }
+    else{
+        api_key = api_key.slice(0,i+1);
+    }
+}
+
 function select(element){
     let selectData = element.textContent;
     inputBox.value = selectData;
@@ -60,8 +83,10 @@ function select(element){
         console.log(api_key);
         const box = document.createElement("button");
         box.innerHTML = y.target.value;
-        box.className = "btn btn-dark btn-lg mybttn"
+        box.className = "btn btn-dark button-9"
+        box.setAttribute('onclick','remove(this)')
         document.getElementById("myDIV").appendChild(box);
+        ClearFields();
     }
     searchWrapper.classList.remove("active");
 }
@@ -85,7 +110,9 @@ buttn.onclick = ()=>{
         console.log(api_key);
     } 
 }
-     
+
+
 // webLink = `https://www.google.com/search?q=${userData}`;
             // linkTag.setAttribute("href", webLink);
             // linkTag.click();
+            // btn btn-dark btn-lg mybttn

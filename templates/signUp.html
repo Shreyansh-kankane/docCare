@@ -21,6 +21,9 @@
             <div class="container">
                 <div class="signup-content">
                     <div class="signup-form">
+                        {% if mesage is defined %}
+                            <h4>{{mesage}}</h4>
+                        {% endif %}
                         <h2 class="form-title">Sign up</h2>
                         <form method="POST" class="register-form" id="register-form">
                             <div class="form-group">

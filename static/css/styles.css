@@ -158,6 +158,11 @@ p {
   margin-bottom: 1rem;
 }
 
+.fa-stack-2x{
+  height: 2.5em;
+  width: 0em;
+}
+
 abbr[title],
 abbr[data-bs-original-title] {
   -webkit-text-decoration: underline dotted;
@@ -889,6 +894,8 @@ progress {
 .gy-5 {
   --bs-gutter-y: 3rem;
 }
+
+
 
 @media (min-width: 576px) {
   .col-sm {

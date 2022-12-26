@@ -1,0 +1,142 @@
+{% extends "layout.html" %}
+{% block title %} 
+    <header class="masthead" style="background-image: url('../static/img/heart.jpg')" >
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="site-heading">
+                        <h1>DocCare</h1>
+                        <span class="subheading"><b>Your Personalise Doctor</b> </span>
+                        <br><h2>{{result}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% if result is defined %}
+      <br><br>
+      <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="post-preview">
+              <a href="">
+                {% if (result=="Presence")  %}
+                <h4 class="post-title">Sorry to say {{ur_name}}</h4>
+                <h5 class="post-subtitle">You probably facing Heart-Disease </h5>
+                {% elif (result=="Absence") %}
+                <h4 class="post-title">No Worries {{ur_name}}</h4>
+                <h5 class="post-subtitle">Chances are low that you have Heart-Disease</h5>
+                {% endif %}
+                <p class="post-meta">
+                  Predicted by Machine Learning Algorithm.
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    {% endif %}
+
+  <div class="testbox">
+    <form method="post">
+      <div class="container heart-heading" style="font-family:verdana;">
+        <h1>Heart-report-analysis</h1>
+      </div>
+      <br/>
+        <fieldset>
+          <legend>Fill form entries</legend>
+          <div class="colums">
+            <div class="item">
+              <label for="Age">Age<span>*</span></label>
+              <input id="Age" type="number" name="age" />
+            </div>
+            <div class="item">
+              <label for="Sex">Sex (0 for Male and 1 for Female)<span>*</span></label>
+              <input list="Sex" type="number" name="sex" />
+              <datalist id="Sex">
+                <option value="0">
+                <option value="1">
+              </datalist>
+            </div>
+            <div class="item">
+              <label for="Chest Pain">Chest Pain(0-4)<span>*</span></label>
+              <input list="Chest" type="number" name=chest />
+              <datalist id="Chest">
+                <option value="0">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">
+              </datalist>
+            </div>
+            <div class="item">
+              <label for="BP">Blood Pressure</label>
+              <input id="BP" type="number" name="BP"/>
+            </div>
+            <div class="item">
+              <label for="Cholesterol">Cholesterol</label>
+              <input id="Cholesterol" type="number" name="cholesterol" />
+            </div>
+            <div class="item">
+              <label for="FBS">FBS over 120</label>
+              <input list="FBS" type="number" name="FBS" />
+              <datalist id="FBS">
+                <option value="0">
+                <option value="1">
+              </datalist>
+            </div>
+            <div class="item">
+              <label for="EKG">EKG results</label>
+              <input list="EKG" type="number" name="EKG" />
+              <datalist id="EKG">
+                <option value="0">
+                <option value="1">
+              </datalist>
+            </div>
+            <div class="item">
+              <label for="HR">Max HR</label>
+              <input id="HR" type="number" name="hr" />
+            </div>
+            <div class="item">
+              <label for="angina">Exercise angina</label>
+              <input list="angina" type="number" name="angina" />
+              <datalist id="angina">
+                <option value="0">
+                <option value="1">
+              </datalist>
+            </div>
+            <div class="item">
+              <label for="ST">ST depression</label>
+              <input id="ST" type="number" step="0.1" name="st" value="0.0"/>
+            </div>
+            <div class="item">
+              <label for="Slope">Slope of ST</label>
+              <input id="Slope" type="number" name="slope" />
+            </div>
+            <div class="item">
+              <label for="vessels">Number of vessels fluro</label>
+              <input list="vessels" type="number" name="vessels" />
+              <datalist id="vessels">
+                <option value="0">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+              </datalist>
+            </div>
+            <div class="item">
+              <label for="Thallium">Thallium</label>
+              <input id="Thallium" type="number" name="thallium" />
+          </div>
+        </fieldset>
+        <br/>
+
+        <div class="btn-block">
+          <button type="submit">Submit</button>
+        </div>
+    </form>
+  </div>
+  <script src="../static/js/myscript2.js"></script>
+{% endblock %}
+    
